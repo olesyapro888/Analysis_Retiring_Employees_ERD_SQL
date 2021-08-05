@@ -93,3 +93,13 @@ WHERE de.to_date = ('9999-01-01');
 --count() current_emp rows
 SELECT COUNT(emp_no)
 FROM current_emp
+
+-- Employee count by department number
+--We added COUNT() to the SELECT statement because we wanted a total number of employees
+SELECT COUNT(ce.emp_no), de.dept_no
+FROM current_emp as ce
+--INTO new_current_emp
+LEFT JOIN dept_employees as de
+ON ce.emp_no = de.emp_no
+GROUP BY de.dept_no
+ORDER BY de.dept_no;
