@@ -78,3 +78,18 @@ ADD FOREIGN KEY (emp_no) REFERENCES employees(emp_no);
 
 -- Check the table
 SELECT * FROM retirement_info;
+
+-- Joining Left for current_emp and dept_employees tables
+SELECT ri.emp_no,
+    ri.first_name,
+    ri.last_name,
+	de.to_date
+INTO current_emp
+FROM retirement_info as ri
+LEFT JOIN dept_employees as de
+ON ri.emp_no = de.emp_no
+WHERE de.to_date = ('9999-01-01');
+
+--count() current_emp rows
+SELECT COUNT(emp_no)
+FROM current_emp
