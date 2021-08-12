@@ -1,5 +1,4 @@
 -- Creating tables for PH-EmployeeDB
--- Creating tables for PH-EmployeeDB
 CREATE TABLE departments (
      dept_no VARCHAR(4) NOT NULL,
      dept_name VARCHAR(40) NOT NULL,
@@ -49,8 +48,6 @@ FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
 );
 
 --DROP TABLE titles CASCADE;
-
-DROP TABLE titles CASCADE;
 
 CREATE TABLE titles (
   emp_no INT NOT NULL,
