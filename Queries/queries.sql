@@ -167,7 +167,7 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
--- Sales info SKILLDRILL
+-- Sales info SKILLDRILL1
 
 SELECT  di.dept_name,
         di.emp_no,
@@ -177,6 +177,54 @@ INTO sales_info
 FROM dept_info AS di
     INNER JOIN retirement_info AS ri
         ON (di.emp_no = ri.emp_no)
-		WHERE di.dept_name='Sales'
-		
+		WHERE di.dept_name='Sales' 
+        
+
 -- SELECT * FROM sales_info
+
+-- Sales info SKILLDRILL2
+SELECT  di.dept_name,
+        di.emp_no,
+        ri.last_name,
+        ri.first_name
+INTO sales_development_info_2
+FROM dept_info AS di
+    INNER JOIN retirement_info AS ri
+        ON (di.emp_no = ri.emp_no)
+        -- WHERE di.dept_name='Sales' OR di.dept_name='Sales'
+		WHERE di.dept_name IN ('Sales', 'Development')
+
+SELECT * FROM sales_development_info
+-- SELECT film_id, title
+-- FROM film 
+-- WHERE film_id NOT IN
+--   (SELECT film_id 
+--    FROM inventory);
+
+
+- Query 1
+
+SELECT DISTINCT ON (r.customer_id) c.first_name, c.last_name, c.email, r.rental_date 
+FROM rental AS r
+JOIN customer AS c 
+ON (r.customer_id=c.customer_id)
+ORDER BY r.customer_id, r.rental_date DESC;
+
+
+-- Query 2
+
+SELECT DISTINCT ON (f.title ) f.title, r.rental_date
+FROM rental AS r
+JOIN inventory as i
+ON (i.inventory_id = r.inventory_id)
+JOIN film as f
+ON (f.film_id = i.film_id)
+ORDER BY f.title, r.rental_date DESC;
+
+-- Bonus
+
+SELECT film_id, title
+FROM film 
+WHERE film_id NOT IN
+  (SELECT film_id 
+   FROM inventory);
