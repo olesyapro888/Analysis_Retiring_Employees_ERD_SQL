@@ -6,7 +6,7 @@
 - [Analysis Result](#the-Pewlett-Hackard-analysis-result)	
   - [The Number of Retiring Employees by Title](#the-number-of-retiring-employees-by-title)	
   - [Employees Eligible for the Mentorship Program](#employees-eligible-for-the-Mentorship-Program)
-- [The Pewlett-Hackard analysis summary](#the-Pewlett-Hackard-analysis-summary	
+- [The Pewlett-Hackard analysis summary](#the-Pewlett-Hackard-analysis-summary)	
 	
 ## `Overview of the Pewlett-Hackard analysis`	
 	
@@ -15,7 +15,7 @@ The purpose for the Pewlett-Hackard analysis are:
 2. Identifying employees who are eligible to participate in a mentorship program.	
 ## `Resources`	
 The analysis is created using next resources:	
-  - Data Source:  [Data folder](./Data/)	
+  - Data Source: [Data folder](./Data/)	
   - Software: Python 3.8.8, PostgreSQL 11.12 and pgAdmin 5.5.	
 ## `The Pewlett-Hackard analysis result`	
 	
