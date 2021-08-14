@@ -166,3 +166,17 @@ INNER JOIN dept_employees AS de
 ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
+
+-- Sales info SKILLDRILL
+
+SELECT  di.dept_name,
+        di.emp_no,
+        ri.last_name,
+        ri.first_name
+INTO sales_info
+FROM dept_info AS di
+    INNER JOIN retirement_info AS ri
+        ON (di.emp_no = ri.emp_no)
+		WHERE di.dept_name='Sales'
+		
+-- SELECT * FROM sales_info
