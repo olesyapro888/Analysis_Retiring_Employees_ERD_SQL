@@ -23,8 +23,12 @@ FROM retirement_titles AS rt
 ORDER BY rt.emp_no ASC, rt.to_date DESC;
 
 -- 15-21 steps of the  Deliverable 1 
-SELECT title, COUNT(title) AS "title_count"
+-- SELECT title, COUNT(title) AS "title_count"
+SELECT COUNT(title) AS "title_count", title
 INTO retiring_titles
 FROM unique_titles
-GROUP BY title
+GROUP BY titles
 ORDER BY "title_count" DESC;
+
+SELECT * FROM retiring_titles
+-- steps of the  Deliverable 2.
