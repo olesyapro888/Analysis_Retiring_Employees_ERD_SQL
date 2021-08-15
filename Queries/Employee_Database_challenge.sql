@@ -1,4 +1,4 @@
--- 1-7 nstructions below to complete Deliverable 1.
+-- 1-7 steps of the  Deliverable 1.
 SELECT em.emp_no AS "employee num", 
        em.first_name, 
        em.last_name,
@@ -11,3 +11,13 @@ FROM employees AS em
       ON (em.emp_no = ti.emp_no)
     WHERE em.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
 ORDER BY "employee num";
+
+-- 8-14 steps of the  Deliverable 1.
+SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
+rt.first_name,
+rt.last_name,
+rt.title
+
+INTO unique_titles
+FROM retirement_titles AS rt
+ORDER BY rt.emp_no, rt.to_date ASC;
