@@ -1,5 +1,5 @@
--- 1-7 steps of the  Deliverable 1.
-SELECT em.emp_no AS "employee num", 
+-- 1-7 steps of the  Deliverable 1 (create a Retirement Titles table that holds all the titles of current employees who were born between January 1, 1952 and December 31, 1955).
+SELECT em.emp_no, 
        em.first_name, 
        em.last_name,
        ti.title, 
@@ -10,20 +10,18 @@ FROM employees AS em
     INNER JOIN titles AS ti
       ON (em.emp_no = ti.emp_no)
     WHERE em.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
-ORDER BY "employee num";
+ORDER BY em.emp_no;
 
--- 8-14 steps of the  Deliverable 1.
+-- 8-14 steps of the  Deliverable 1 (use the DISTINCT ON statement to create a table that contains the most recent title of each employee).
 SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
 rt.first_name,
 rt.last_name,
 rt.title
-
 INTO unique_titles
 FROM retirement_titles AS rt
 ORDER BY rt.emp_no ASC, rt.to_date DESC;
 
--- 15-21 steps of the  Deliverable 1 
--- SELECT title, COUNT(title) AS "title_count"
+-- 15-21 steps of the  Deliverable 1  (use the COUNT() function to create a final table that has the number of retirement-age employees by most recent job title).
 SELECT COUNT(title) AS "title_count", title
 INTO retiring_titles
 FROM unique_titles
@@ -31,4 +29,23 @@ GROUP BY titles
 ORDER BY "title_count" DESC;
 
 SELECT * FROM retiring_titles
--- steps of the  Deliverable 2.
+
+-- 1-11 steps of the  Deliverable 2 (create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965).
+SELECT DISTINCT ON (em.emp_no) em.emp_no AS "emp_no", 
+					em.first_name, 
+					em.last_name, 
+					em.birth_date,
+					de.from_date, 
+					de.to_date, 
+					ti.title
+INTO mentorship_eligibilty
+FROM employees AS em
+	INNER JOIN dept_employees AS de 
+		ON (em.emp_no = de.emp_no)
+	INNER JOIN titles AS ti 
+		ON (em.emp_no = ti.emp_no)
+	WHERE de.to_date = ('9999-01-01') AND
+	(em.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+ORDER BY "emp_no";
+
+SELECT * FROM mentorship_eligibilty
