@@ -43,7 +43,6 @@ SELECT DISTINCT ON (em.emp_no) em.emp_no AS "emp_no",
 					em.birth_date,
 					de.from_date, 
 					de.to_date, 
-
 					ti.title
 INTO mentorship_eligibilty
 FROM employees AS em
