@@ -18,7 +18,7 @@ The purpose for the Pewlett-Hackard analysis are:
 ## `Resources`	
 The analysis is created using next resources:	
   - Data Source: [Data folder](./Data/)	
-  - Software: Python 3.8.8, PostgreSQL 11.12 and pgAdmin 5.5.	
+  - Software: PostgreSQL 11.12 and pgAdmin 5.5.	
 
 ## `The Pewlett-Hackard analysis result`	
 	
