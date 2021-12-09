@@ -1,5 +1,6 @@
-# Pewlett-Hackard-Analysis
-## `-Indice-`	
+# Pewlett-Hackard-Analysis. The project 7 of the University of Toronto.
+
+## `-Contents-`	
 	
 - [Overview of the Project](#overview-of-the-Pewlett-Hackard-analysis)	
 - [Resources](#resources)	
@@ -12,11 +13,13 @@
 	
 The purpose for the Pewlett-Hackard analysis are: 	
 1. Determining the number of retiring employees per title; 
-2. Identifying employees who are eligible to participate in a mentorship program.	
+2. Identifying employees who are eligible to participate in a mentorship program.
+	
 ## `Resources`	
 The analysis is created using next resources:	
   - Data Source: [Data folder](./Data/)	
-  - Software: Python 3.8.8, PostgreSQL 11.12 and pgAdmin 5.5.	
+  - Software: PostgreSQL 11.12 and pgAdmin 5.5.	
+
 ## `The Pewlett-Hackard analysis result`	
 	
 Full results can be found in the [Data folder](./Data) and in the [Employee_Database_Challenge](./Employee_Database_challenge.sql) file.	
