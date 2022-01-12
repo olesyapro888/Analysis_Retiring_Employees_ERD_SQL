@@ -1,5 +1,3 @@
--- 1-7 steps of the  Deliverable 1 (create a Retirement Titles table that holds all 
--- the titles of current employees who were born between January 1, 1952 and December 31, 1955).
 SELECT em.emp_no, 
        em.first_name, 
        em.last_name,
@@ -12,6 +10,8 @@ FROM employees AS em
       ON (em.emp_no = ti.emp_no)
     WHERE em.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
 ORDER BY em.emp_no;
+-- 1-7 steps of the  Deliverable 1 (create a Retirement Titles table that holds all 
+-- the titles of current employees who were born between January 1, 1952 and December 31, 1955).
 
 -- 8-14 steps of the  Deliverable 1 (use the DISTINCT ON statement to create a table 
 -- that contains the most recent title of each employee).
