@@ -1,4 +1,4 @@
-# Avalysis of Number of Retiring Employees and eligible employees for the Mentorship Program using Pewlett Hackard data, ERD, SQL queries.
+# Technical analysis of retiring employees and eligible employees for the Mentorship Program using ERD, intermediate-level SQL statements for Data Engineering.
 
 ## `-Contents-`	
 	
