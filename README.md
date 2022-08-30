@@ -1,4 +1,4 @@
-# Pewlett-Hackard-Analysis. The project 7 of the University of Toronto.
+# Pewlett-Hackard-Analysis.
 
 ## `-Contents-`	
 	
